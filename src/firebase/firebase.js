@@ -7,12 +7,12 @@ import { doc, getDoc, getFirestore } from "firebase/firestore";
 //wtf?REACT_APP_FIREBASE_DATABASE_URL=
 import { getPerformance } from "firebase/performance";
 const firebaseConfig = {
-    apiKey: Process.env.API_KEY,
-    authDomain: Process.env.AUTH_DOMAIN,
-    projectId: Process.env.PROJECT_ID,
-    storageBucket:Process.env.STORAGE_BUCKET,
-    messagingSenderId: Process.env.MASAGING_ID,
-    appId:Process.env.APP_ID
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    projectId: process.env.PROJECT_ID,
+    storageBucket:process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MASAGING_ID,
+    appId:process.env.APP_ID
 
 };
 
