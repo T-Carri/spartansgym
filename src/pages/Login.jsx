@@ -60,7 +60,7 @@ export const Login = () => {
   return (
     <div class="full-screen-container">
     <div class="login-container">
-      <h1 class="login-title">Welcome</h1>
+      <h1 class="login-title">Para la niña de mi corazon: Margarita</h1>
       <form class="form" onSubmit={handleSubmit}>
         <div class="input-group success" >
           <label for="email">Email</label>
