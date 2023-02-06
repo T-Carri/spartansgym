@@ -7,12 +7,12 @@ import { doc, getDoc, getFirestore } from "firebase/firestore";
 //wtf?REACT_APP_FIREBASE_DATABASE_URL=
 import { getPerformance } from "firebase/performance";
 const firebaseConfig = {
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.AUTH_DOMAIN,
-    projectId: process.env.PROJECT_ID,
-    storageBucket:process.env.STORAGE_BUCKET,
-    messagingSenderId: process.env.MASAGING_ID,
-    appId:process.env.APP_ID
+    apiKey: "AIzaSyBlIpvRRFRV18MmWtTNYYOOR-r-EINJSaw",
+    authDomain: "espartans-693a2.firebaseapp.com",
+    projectId: "espartans-693a2",
+    storageBucket: "espartans-693a2.appspot.com",
+    messagingSenderId: "375799491134",
+    appId: "1:375799491134:web:3d92ebd68815aac6253f6f"
 
 };
 
