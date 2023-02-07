@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react'
 //import { Form, Button, Card, Alert } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 
 
@@ -60,7 +60,7 @@ export const Login = () => {
   return (
     <div class="full-screen-container">
     <div class="login-container">
-      <h1 class="login-title">Para la niña de mi corazon: Margarita</h1>
+      <h1 class="login-title">Gimnasio Espartans</h1>
       <form class="form" onSubmit={handleSubmit}>
         <div class="input-group success" >
           <label for="email">Email</label>

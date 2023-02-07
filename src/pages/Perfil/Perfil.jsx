@@ -6,13 +6,14 @@ import {
   import { UserAuth } from '../../context/AuthContext';
 
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import MenuIcon from '@mui/icons-material/Menu';
 import  Container  from '@mui/material/Container';
 
@@ -20,11 +21,14 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import clientes from './clientes.jpg'
+import inventario from './inventario.jpg'
 
-import magie2 from './magie2.jpg' 
-import magie1 from './magie1.jpg' 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 
 
@@ -39,6 +43,14 @@ const theme = createTheme({
       },
     },
   });
+
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode ===  '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
   
   const Perfil = () => {
 
@@ -74,11 +86,10 @@ const theme = createTheme({
         
         }
       };
+
+
+
   
-
-
-
-
 
 
     return (
@@ -94,10 +105,10 @@ const theme = createTheme({
                 aria-label="menu"
                 sx={{ mr: 2 }}
               >
-                <MenuIcon />
+                <FitnessCenterIcon/>
               </IconButton>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Para magie
+                Spartans gym
               </Typography>
               <Button color="inherit" onClick={handleLogout}>Salir</Button>
             </Toolbar>
@@ -105,47 +116,41 @@ const theme = createTheme({
         </Box>
       </ThemeProvider>
 
-<Container fixed>
-<h2>test</h2>
-<Card sx={{ maxWidth: 345 }}>
+<Grid container spacing={1}>
+  <Grid item xs={8} >
+<Container fixed   >
+<Card sx={{ maxWidth: 1000 }}>
       <CardMedia
-        sx={{ height: 300 }}
-        image={magie1}
-        title="green iguana"
+        sx={{ height:700 }}
+        image={inventario}
+        title="inventario"
+        onClick={()=>console.log("click image")}
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Esa sonrisa
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-     <strong> Para la sonricita que tanto amo ver y oir que nunca me falte, porque es la mejor musica que he escuchado. Te amo.</strong>     
-        </Typography>
-      </CardContent>
-      <CardActions>
-      {/*   <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button> */}
-      </CardActions>
-    </Card>, 
-<Card sx={{ maxWidth: 345 }}>
+        <Typography variant="h2" gutterBottom sx={{ position: 'absolute', top: '60%', left: '12%', transform: 'translate(-50%, -50%)', color: 'white'  }}>
+    
+  </Typography>
+    </Card>
+
+</Container>
+  </Grid>
+  <Grid item xs={4}>
+  <Container fixed /* className={classes.root} */>
+ 
+  <Card sx={{ maxWidth: 200 }}>
       <CardMedia
-        sx={{ height: 300 }}
-        image={magie2}
-        title="green iguana"
+        sx={{ height:200 }}
+        image={clientes}
+        title="inventario"
+        onClick={()=>console.log("click image")}
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Los ojitos
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Una de las cosas que mas amo en esta vida: <strong>Esos ojitos porque le dan color a mi vida.</strong>   
-        </Typography>
-      </CardContent>
-      <CardActions>
-      {/*   <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button> */}
-      </CardActions>
+        <Typography variant="h2" gutterBottom sx={{ position: 'absolute', top: '60%', left: '12%', transform: 'translate(-50%, -50%)', color: 'white'  }}>
+    Clientes
+  </Typography>
     </Card>
 </Container>
+  </Grid>
+
+</Grid>
 </>
 
 
